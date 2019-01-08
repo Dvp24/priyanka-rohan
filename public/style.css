@@ -1,0 +1,116 @@
+
+body{
+  /* font-family: 'Alex Brush', cursive; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: goldenrod;
+  min-height: 100%;
+  text-align: center;
+  background-image: url("https://i.pinimg.com/originals/4d/14/42/4d1442bd6c1ab961e1fdb99498c10bfc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: rgb(126, 8, 8); */
+}
+#loading{
+  width: 90%;
+ position: relative;
+  z-index: 3000;
+}
+#priya, #priya-alt{
+  width: 55%;
+  height: 60%;
+  position: absolute;
+  z-index: 30; 
+  border-radius: 100%;
+  /* padding-top: 40px; */
+}
+#priya-alt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Alex Brush', cursive;
+  font-size: 300%;
+  font-weight: bolder
+}
+#loading {
+  -webkit-animation: rotation 8s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+.together{
+  width: 35%;
+  height: 70%;
+  /* border: 1px solid black; */
+  position: fixed;
+  top: 16%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slideToSide{
+  position: absolute;
+  overflow: hidden; 
+  transition: all 1.5s ease;
+  -webkit-transform: translateX(-80%) translateY(-40%);
+  /* -webkit-transform: translateX(-80%); */
+  
+}
+.together{
+  -webkit-animation: shrink 3s linear;
+}
+@-webkit-keyframes shrink {
+  from {
+  -webkit-transform:scale(1);
+  }
+  to {
+    -webkit-transform:scale(.333);
+  }
+}
+.navbar{
+  height: 40%;
+}
+#mainPhoto{
+  float: right;
+}
+.mainPhoto{
+  float: right;
+  margin: 5% 15% auto auto;
+  width: 55%;
+  height: 40%;
+}
+.lineStyle{
+  width: 10%;
+  height: 40px;
+  position: absolute;
+  left: 38.5%;
+  /* right: 80px; */
+  transition: 2s ease;
+
+}
+.fix{
+  width: 100px
+}
+
+a, a:hover{
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.hometorsvp,.hometophotos{
+  position: absolute;
+  overflow: hidden; 
+  transition: all 1.5s ease;
+}
+.hometorsvp{
+  -webkit-transform: translateX(74%);
+}
+.hometophotos{
+  -webkit-transform: translateX(157%);
+}
