@@ -10,26 +10,13 @@ $(".nav-clk").on("click", function () {
   next = $(this).text();
   console.log(next)
   if (now == "home") {
-    // fromHome(next)
-    trial(next)
+    fromHome(next)
   }else if(now == "RSVP"){
     // from
   }
 });
 
-function trial(next){
-  console.log(next+"here")
-  if(next == "PHOTOS"){
-    console.log("clicked photos")
-  }  else if(next == "RSVP"){
-    console.log("clicked rsvp")
 
-  }else if (next == "EVENTS"){
-    console.log("clicked events")
-
-  }
-
-}
 
 function fromHome(next) {
 console.log("next ...."+next)
