@@ -62,15 +62,18 @@ const eventListSeed = [
 //     console.log(err.message);
 //   })
   
+function initDB() {
   db.RSVP
   .remove({})
   .then(() => db.RSVP.insertMany(rsvpListSeed))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    console.log(data.length + " records inserted!");
   })
   .catch(err => {
     console.error(err);
-    process.exit(1);
   });
+}
 
+module.exports = {
+  init: initDB,
+}
