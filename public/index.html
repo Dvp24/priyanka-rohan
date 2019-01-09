@@ -18,7 +18,7 @@
   <div class="together">
     <img id="loading" src="https://i.pinimg.com/originals/65/e6/5c/65e65c3019f75f9a00a4ef029a4c8468.png" alt="">
     <div id="priya-alt"> R <br> P </div>
-    <img id="priya" src="./images/pr1.jpg" alt="">
+    <!-- <img id="priya" src="./images/pr1.jpg" alt=""> -->
 
   </div>
 
@@ -30,11 +30,11 @@
       </li>
       <li class="nav-item pt-5 pb-0 px-4  photos"><a class="nav-clk" data-href="photos">PHOTOS</a>
         </li> 
-      <li class="nav-item pt-5 pb-0 px-4 nav-clk event"><a class="nav-clk" data-href="photos">EVENTS</a> 
+      <li class="nav-item pt-5 pb-0 px-4 nav-clk event"><a class="nav-clk" data-href="events">EVENTS</a> 
       </li>
-      <li class="nav-item pt-5 pb-0 px-4 nav-clk acc"> ACCOMODATIONS
+      <li class="nav-item pt-5 pb-0 px-4 nav-clk acc"> <a class="nav-clk" data-href="photos">ACCOMODATIONS</a>
       </li>
-      <li class="nav-item pt-5 pb-0 px-4 nav-clk registry"> REGISTERY
+      <li class="nav-item pt-5 pb-0 px-4 nav-clk registry"> <a class="nav-clk" data-href="photos">REGISTRY</a>
       </li>
     </ul>
     <div class="line">
@@ -65,45 +65,28 @@
   <script src="./scroll.js"></script>
   <script>
     $(".navbar").hide();
-    $("#priya-alt").hide();
     $("#mainPhoto").hide();
-    // $(".lineStyle").hide();
+    $(".map").hide()
+    $()
     var animation2 = setTimeout(() => {
       $(".together").addClass("slideToSide")
       var delay = setTimeout(() => {
 
         $(".navbar").show()
         $("#mainPhoto").show();
-        // $(".lineStyle").show();
       }, 2000)
       $("#priya").hide();
-      $("#priya-alt").show();
-    }, 5000);
+    }, 3000);
 
     // nav click function
     $(".event").on("click", function () {
-      // var currentTab = $(this).text();
-      // console.log("current tab"+ currentTab);
-      $.ajax({
+        $.ajax({
         url: "/api/EVENTS",
         method: "GET"
       }).then(function (data) {
         console.log(data)
       })
     })
-   
-    // var prev = "home"
-  // $(".nav-clk").on("click", function (event) {
-  //   event.preventDefault();
-  //   var next = $(this).text();
-  //   console.log(next)
-  //   var position = $(this).attr("pos")
-  //   console.log(position)
-  //   $('.lineStyle').scrollLeft(100)
-  // })
-
-  // $(".directions1").on("click",function)
   </script>
 </body>
-
 </html>

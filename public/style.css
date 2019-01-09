@@ -15,7 +15,7 @@ body{
  position: relative;
   z-index: 3000;
 }
-#priya, #priya-alt{
+#priya-alt{
   width: 55%;
   height: 60%;
   position: absolute;
@@ -32,24 +32,24 @@ body{
   font-weight: bolder
 }
 #loading {
-  -webkit-animation: rotation 8s infinite linear;
+  animation: rotation 8s infinite linear;
 }
 
-@-webkit-keyframes rotation {
+@keyframes rotation {
   from {
-      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   to {
-      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
   }
 }
 .together{
   width: 35%;
   height: 70%;
   /* border: 1px solid black; */
-  position: fixed;
-  top: 16%;
-  left: 30%;
+  position: absolute;
+  /* top: 16%;
+  left: 30%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,20 +57,20 @@ body{
 .slideToSide{
   position: absolute;
   overflow: hidden; 
-  transition: all 1.5s ease;
-  -webkit-transform: translateX(-80%) translateY(-40%);
+  /* transition: all .5s ease; */
+  /* transform: translateX(-80%) translateY(-40%); */
   /* -webkit-transform: translateX(-80%); */
   
 }
 .together{
-  -webkit-animation: shrink 3s linear;
+  animation: shrink 2s linear;
 }
-@-webkit-keyframes shrink {
+@keyframes shrink {
   from {
-  -webkit-transform:scale(1);
+  transform:scale(1) 
   }
   to {
-    -webkit-transform:scale(.333);
+    transform:scale(.5) translateX(-230%) translateY(-90%);
   }
 }
 .navbar{
@@ -90,7 +90,7 @@ body{
   height: 54px;
   position: absolute;
   top: 80px;
-  left: 38.5%;
+  left: 40%;
   /* right: 80px; */
   transition: 2s ease;
 
@@ -104,14 +104,103 @@ a, a:hover{
   text-decoration: none;
 }
 
-.hometorsvp,.hometophotos{
+/* .hometorsvp,.hometophotos{
   position: absolute;
   overflow: hidden; 
   transition: all 1.5s ease;
-}
+} */
 .hometorsvp{
-  -webkit-transform: translateX(74%);
+  transform: translateX(76%);
 }
 .hometophotos{
-  -webkit-transform: translateX(157%);
+  transform: translateX(155%);
+}
+.hometoevents{
+  transform: translateX(244%);
+}
+.hometoacc{
+  transform: translateX(364%);
+}
+.hometoregistry{
+  transform: translateX(487%);
+}
+/* rsvp */
+.rsvptohome{
+  transform: translateX(0%);
+}
+.rsvptophotos{
+  transform: translateX(155%);
+}
+.rsvptoevents{
+  transform: translateX(244%);
+}
+.rsvptoacc{
+  transform: translateX(364%);
+}
+.rsvptoregistry{
+  transform: translateX(487%);
+}
+/*photos  */
+.photostohome{
+  transform: translateX(0%);
+}
+.photostorsvp{
+  transform: translateX(76%);
+}
+.photostoevents{
+  transform: translateX(244%);
+}
+.photostoacc{
+  transform: translateX(364%);
+}
+.photostoregistry{
+  transform: translateX(487%);
+}
+/*events  */
+.eventstohome{
+  transform: translateX(0%);
+}
+.eventstorsvp{
+  transform: translateX(76%);
+}
+.eventstophotos{
+  transform: translateX(155%);
+}
+.eventstoacc{
+  transform: translateX(364%);
+}
+.eventstoregistry{
+  transform: translateX(487%);
+}
+/*ACCOMODATIONS  */
+.acctohome{
+  transform: translateX(0%);
+}
+.acctorsvp{
+  transform: translateX(76%);
+}
+.acctophotos{
+  transform: translateX(155%);
+}
+.acctoevents{
+  transform: translateX(244%);
+}
+.acctoregistry{
+  transform: translateX(364%);
+}
+/*registry  */
+.registrytohome{
+  transform: translateX(0%);
+}
+.registrytorsvp{
+  transform: translateX(76%);
+}
+.registrytophotos{
+  transform: translateX(155%);
+}
+.registrytoevents{
+  transform: translateX(244%);
+}
+.registrytoacc{
+  transform: translateX(364%);
 }
