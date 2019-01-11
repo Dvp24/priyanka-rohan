@@ -73,7 +73,17 @@ function initDB() {
     console.error(err);
   });
 }
-
+function initDB() {
+  db.EVENT
+  .remove({})
+  .then(() => db.EVENT.insertMany(eventListSeed))
+  .then(data => {
+    console.log(data.length + " records inserted!");
+  })
+  .catch(err => {
+    console.error(err);
+  });
+}
 module.exports = {
   init: initDB,
 }
